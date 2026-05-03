@@ -1,6 +1,7 @@
 "use client";
+import Image from 'next/image';
+import Link from 'next/link';
 
-import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -51,9 +52,15 @@ export function PublicNavbar() {
       >
         <div className="mx-auto flex h-20 w-full max-w-[1280px] items-center justify-between px-4 md:px-8">
           {/* Implementasi Logo Disini */}
-          <Link href="/" className="flex items-center gap-2 text-xl font-bold text-orange-600">
-            <AbsLogo /> 
-            <span className="tracking-tight">Azzam Barokah Steel</span>
+          <Link href="/" className="flex items-center gap-2 text-xl font-bold text-[#1B4332]">
+            <Image 
+              src="/logo.png" 
+              alt="Logo" 
+              width={40} // Sesuaikan ukuran
+              height={40} 
+              priority // Opsional: agar loading lebih cepat untuk elemen LCP
+            />
+            <span>Azzam Barokah Steel</span>
           </Link>
 
           <nav className="hidden items-center gap-6 md:flex">
