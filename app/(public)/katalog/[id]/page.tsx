@@ -98,7 +98,7 @@ function ProductDetailClient({ product }: { product: any }) {
                     <ChevronRight className="h-5 w-5" />
                   </button>
                   <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
-                    {product.images.map((_, index) => (
+                    {product.images.map((_: any, index: number) => (
                       <button
                         key={index}
                         onClick={() => goToImage(index)}
