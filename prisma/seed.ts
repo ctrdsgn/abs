@@ -42,12 +42,12 @@ async function main() {
     "Stainless Steel 316": 1.3,
     "Baja Ringan": 1.5,
   };
+const complexityMultipliers: Record<string, number> = {
+  "Standar": 1.0,
+  "Semi-Custom": 1.4,
+  "Full-Custom": 2.0,
+};
 
-  const complexityMultipliers = {
-    Standar: 1.0,
-    Semi-Custom: 1.4,
-    Full-Custom: 2.0,
-  };
 
   await prisma.pricingConfig.upsert({
     where: { category: "Pagar" },
