@@ -68,11 +68,8 @@ export default async function HomePage() {
           </div>
           <div className="flex min-h-72 items-center justify-center rounded-2xl bg-gradient-to-br from-[#1B4332] to-[#D4A017] text-6xl text-white shadow-xl">
             <Image 
-                          src="/logo.png" 
+                          src="/landing.jpg" 
                           alt="Logo" 
-                          width={40} // Sesuaikan ukuran
-                          height={40} 
-                          priority // Opsional: agar loading lebih cepat untuk elemen LCP
                         />
           </div>
         </div>
