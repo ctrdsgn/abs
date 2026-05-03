@@ -68,7 +68,7 @@ export default async function HomePage() {
           </div>
           <div className="flex min-h-72 items-center justify-center rounded-2xl bg-gradient-to-br from-[#1B4332] to-[#D4A017] text-6xl text-white shadow-xl">
             <Image 
-                          src="/landing.jpg" 
+                          src="/landing.jpeg" 
                           alt="Logo" 
                         />
           </div>
