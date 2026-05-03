@@ -24,12 +24,12 @@ This PRD is written to be executed by an AI coding agent. Follow these rules str
 
 ## 1. Project Context
 
-**Business:** Azzam Barokah Steel — custom stainless steel workshop in Dumai, Riau  
+**Business:** Azzam Barokah Steel — custom stainless steel workshop in Duri - Bengkalis, Riau  
 **Tagline:** "Stainless steel custom: pagar, pintu, tangga, canopy, balkon, alat medis, baja ringan, trush & kubah mesjid"  
-**Phone:** 0823-8559-7262  
-**Address:** Jl. Nelayan Laut, Pangkalan Sesai, Kec. Dumai Bar., Kota Dumai, Riau 28821  
+**Phone:** 0852-7673-9937  
+**Address:** Jl. Nelayan Laut, Pangkalan Sesai, Kec. Duri - Bengkalis Bar., Kota Duri - Bengkalis, Riau 28821  
 **Google Rating:** 4.5 / 5  
-**WhatsApp Number (for CTA links):** 6282385597262
+**WhatsApp Number (for CTA links):** 6285276739937
 
 ---
 
@@ -268,7 +268,7 @@ model PricingConfig {
 ```
 
 **Seed file** (`prisma/seed.ts`) must create:
-- 1 Super Admin: email `admin@azzambarokahsteel.com`, password `Admin123!` (hashed with bcryptjs)
+- 1 Super Admin: email `admin@kreasikribo.com`, password `Admin123!` (hashed with bcryptjs)
 - 3 PricingConfig entries:
   - `Kursi`: basePrice=500000, pricePerCm=50, materialMultipliers=`{"Triplek":1.0,"MDF":1.2,"Kayu Jati":2.0}`, complexityMultipliers=`{"Simple":1.0,"Standar":1.3,"Premium":1.7}`
   - `Meja`: basePrice=800000, pricePerCm=80, same multipliers
@@ -339,7 +339,7 @@ Must appear on ALL public pages (put in public layout):
 
 ```tsx
 <a
-  href="https://wa.me/6282385597262"
+  href="https://wa.me/6285276739937"
   target="_blank"
   rel="noopener noreferrer"
   className="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-xl hover:bg-green-600 transition-transform hover:scale-110"
@@ -377,7 +377,7 @@ Sections in order:
 
 **2. Hero** (`min-h-screen flex items-center`, dark green gradient background `from-brand-dark to-brand-primary`)
 - Large headline (white): `"Stainless Steel Custom Berkualitas"` — `text-5xl md:text-7xl font-black`
-- Subtext (white/80): `"Pagar, pintu, tempat tidur, tangga, canopy, balkon, alat medis, baja ringan, trush, hingga kubah mesjid — kami wujudkan pesanan stainless steel impian Anda di Dumai, Riau."`
+- Subtext (white/80): `"Pagar, pintu, tempat tidur, tangga, canopy, balkon, alat medis, baja ringan, trush, hingga kubah mesjid — kami wujudkan pesanan stainless steel impian Anda di Duri - Bengkalis, Riau."`
 - Two buttons: "Lihat Katalog" (brand.secondary bg) and "Chat WhatsApp" (white outline)
 - Decorative element: animated floating shapes or abstract furniture silhouette (CSS only)
 - Scroll indicator at bottom
@@ -463,7 +463,7 @@ Layout: 2-col on desktop (images left, info right)
 - If dimensions: label "Dimensi:" + value
 - If material: label "Material:" + value
 - Two CTA buttons (stacked on mobile, side-by-side on desktop):
-  - "Pesan via WhatsApp" → `wa.me/6282385597262?text=Halo Azzam Barokah Steel, saya tertarik dengan produk [name]`
+  - "Pesan via WhatsApp" → `wa.me/6285276739937?text=Halo Azzam Barokah Steel, saya tertarik dengan produk [name]`
   - "Request Custom" → `/order`
 
 **Related products:** heading `"Produk Serupa"`, 3 cards from same category (exclude current), grid-cols-3
@@ -562,12 +562,12 @@ Sections:
 1. Hero sub-page: heading `"Tentang Azzam Barokah Steel"`, breadcrumb
 2. Story section: 2-col, placeholder image + 2 paragraphs about company
 3. Values: 3 cards — `"Kualitas Terjamin"`, `"Tepat Waktu"`, `"Kepuasan Pelanggan"` each with icon and 1-sentence description
-4. Google Maps embed: `<iframe>` for Jl. Nelayan Laut, Dumai (use standard Google Maps embed URL)
+4. Google Maps embed: `<iframe>` for Jl. Nelayan Laut, Duri - Bengkalis (use standard Google Maps embed URL)
 5. Contact card: address, phone (tel: link), WhatsApp button, operating hours table (Mon–Sat 08.00–17.30, Sun: Tutup)
 6. FAQ accordion (5 items):
    - "Berapa lama waktu pengerjaan?" → "Tergantung kompleksitas, rata-rata 7–21 hari kerja."
    - "Apakah bisa request desain sendiri?" → "Tentu! Kami menerima desain custom sesuai kebutuhan Anda."
-   - "Area pengiriman mana saja?" → "Kami melayani seluruh wilayah Dumai dan sekitarnya. Luar kota bisa didiskusikan."
+   - "Area pengiriman mana saja?" → "Kami melayani seluruh wilayah Duri - Bengkalis dan sekitarnya. Luar kota bisa didiskusikan."
    - "Apakah ada garansi?" → "Ya, kami memberikan garansi pengerjaan selama 3 bulan."
    - "Bagaimana cara pemesanan?" → "Hubungi kami via WhatsApp atau isi form Request Custom Order di website ini."
 
@@ -842,7 +842,7 @@ export function timeAgo(date: Date | string): string {
 
 // Build WhatsApp URL
 export function buildWAUrl(message: string): string {
-  return `https://wa.me/6282385597262?text=${encodeURIComponent(message)}`
+  return `https://wa.me/6285276739937?text=${encodeURIComponent(message)}`
 }
 
 // Truncate text
@@ -963,7 +963,7 @@ After completing all phases, agent must verify:
 - [ ] `/portofolio` loads (empty state shown if no portfolio)
 - [ ] `/estimasi` — all 3 steps work, estimate calculates correctly
 - [ ] `/order` — form submits, success state shown
-- [ ] `/admin/login` — login with `admin@azzambarokahsteel.com / Admin123!` works
+- [ ] `/admin/login` — login with `admin@kreasikribo.com / Admin123!` works
 - [ ] Admin dashboard loads with stats (zeros if no data)
 - [ ] Admin can add a product with images
 - [ ] Admin can view and update order status

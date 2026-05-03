@@ -45,7 +45,7 @@ export function PublicNavbar() {
             ))}
           </nav>
           <a
-            href="https://wa.me/6282385597262"
+            href="https://wa.me/6285276739937"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden rounded-full bg-orange-600 px-5 py-2 text-sm font-semibold text-white transition-all duration-200 hover:scale-[1.02] hover:bg-orange-700 md:block"
@@ -79,7 +79,7 @@ export function PublicNavbar() {
                   </Link>
                 ))}
                 <a
-                  href="https://wa.me/6282385597262"
+                  href="https://wa.me/6285276739937"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-2 rounded-full bg-orange-600 px-8 py-4 text-center font-semibold text-white transition-all duration-200 hover:scale-[1.02] hover:bg-orange-700"

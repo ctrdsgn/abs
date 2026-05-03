@@ -25,7 +25,7 @@ export function timeAgo(date: Date | string): string {
 }
 
 export function buildWAUrl(message: string): string {
-  return `https://wa.me/6282385597262?text=${encodeURIComponent(message)}`;
+  return `https://wa.me/6285276739937?text=${encodeURIComponent(message)}`;
 }
 
 export function truncate(text: string, max: number): string {

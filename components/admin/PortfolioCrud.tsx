@@ -348,7 +348,7 @@ export function PortfolioCrud() {
                 type="text"
                 value={formData.location}
                 onChange={(e) => setFormData({ ...formData, location: e.target.value })}
-                placeholder="contoh: Dumai, Riau"
+                placeholder="contoh: Duri - Bengkalis, Riau"
                 className="mt-1 w-full rounded-xl border border-gray-300 px-4 py-3 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-brand-primary"
               />
             </div>

@@ -33,9 +33,9 @@ export default function PublicLayout({ children }: { children: React.ReactNode }
           </div>
           <div className="space-y-2 text-sm text-white/80">
             <p className="font-semibold text-white">Kontak</p>
-            <p>Jl. Nelayan Laut, Dumai, Riau</p>
+            <p>Jl. Nelayan Laut, Duri - Bengkalis, Riau</p>
             <a href="tel:082385597262" className="block hover:text-white">
-              0823-8559-7262
+              0852-7673-9937
             </a>
             <p>Senin-Sabtu 08.00-17.30</p>
           </div>

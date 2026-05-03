@@ -26,7 +26,7 @@ export default async function HomePage() {
             </h1>
             <div className="mt-2 h-1 w-40 rounded-full bg-orange-500" />
           <p className="mt-6 max-w-2xl text-white/80">
-            Pagar, pintu, tempat tidur, tangga, canopy, balkon, alat medis, baja ringan, trush, hingga kubah mesjid — kami wujudkan pesanan stainless steel impian Anda di Dumai, Riau.
+            Pagar, pintu, tempat tidur, tangga, canopy, balkon, alat medis, baja ringan, trush, hingga kubah mesjid — kami wujudkan pesanan stainless steel impian Anda di Duri - Bengkalis, Riau.
           </p>
             <div className="mt-10 flex w-full flex-col gap-4 md:w-auto md:flex-row">
               <Link
@@ -36,7 +36,7 @@ export default async function HomePage() {
               Lihat Katalog
             </Link>
             <a
-              href="https://wa.me/6282385597262"
+              href="https://wa.me/6285276739937"
               target="_blank"
               rel="noopener noreferrer"
                 className="rounded-full border-2 border-white px-8 py-4 text-center font-semibold transition-all duration-200 hover:scale-[1.02]"
