@@ -8,7 +8,7 @@ async function main() {
   const staffPassword = await hash("Staff123!", 10);
 
   await prisma.user.upsert({
-    where: { email: "admin@kreasikribo.com" },
+    where: { email: "admin@azzambarokahsteel.com" },
     update: {
       name: "Super Admin",
       password,
@@ -16,14 +16,14 @@ async function main() {
     },
     create: {
       name: "Super Admin",
-      email: "admin@kreasikribo.com",
+      email: "admin@azzambarokahsteel.com",
       password,
       role: Role.SUPER_ADMIN,
     },
   });
 
   await prisma.user.upsert({
-    where: { email: "staff@kreasikribo.com" },
+    where: { email: "staff@azzambarokahsteel.com" },
     update: {
       name: "Staff Operasional",
       password: staffPassword,
@@ -31,7 +31,7 @@ async function main() {
     },
     create: {
       name: "Staff Operasional",
-      email: "staff@kreasikribo.com",
+      email: "staff@azzambarokahsteel.com",
       password: staffPassword,
       role: Role.STAFF,
     },

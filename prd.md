@@ -268,7 +268,7 @@ model PricingConfig {
 ```
 
 **Seed file** (`prisma/seed.ts`) must create:
-- 1 Super Admin: email `admin@kreasikribo.com`, password `Admin123!` (hashed with bcryptjs)
+- 1 Super Admin: email `admin@azzambarokahsteel.com`, password `Admin123!` (hashed with bcryptjs)
 - 3 PricingConfig entries:
   - `Kursi`: basePrice=500000, pricePerCm=50, materialMultipliers=`{"Triplek":1.0,"MDF":1.2,"Kayu Jati":2.0}`, complexityMultipliers=`{"Simple":1.0,"Standar":1.3,"Premium":1.7}`
   - `Meja`: basePrice=800000, pricePerCm=80, same multipliers
@@ -963,7 +963,7 @@ After completing all phases, agent must verify:
 - [ ] `/portofolio` loads (empty state shown if no portfolio)
 - [ ] `/estimasi` — all 3 steps work, estimate calculates correctly
 - [ ] `/order` — form submits, success state shown
-- [ ] `/admin/login` — login with `admin@kreasikribo.com / Admin123!` works
+- [ ] `/admin/login` — login with `admin@azzambarokahsteel.com / Admin123!` works
 - [ ] Admin dashboard loads with stats (zeros if no data)
 - [ ] Admin can add a product with images
 - [ ] Admin can view and update order status
