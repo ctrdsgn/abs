@@ -93,7 +93,7 @@ export default async function KatalogPage() {
                     </Link>
                   </div>
                 </div>
-                <div className="p-6">
+                <div className="p-4 md:p-5">
                   <h2 className="text-xl font-bold text-brand-dark transition-colors group-hover:text-brand-primary">
                     {product.name}
                   </h2>
