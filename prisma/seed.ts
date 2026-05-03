@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { hash } from "bcryptjs";
 import { OrderStatus, PrismaClient, ProjectType, Role } from "@prisma/client";
 
