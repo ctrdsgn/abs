@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Menu, TreePine, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const navItems = [
@@ -10,6 +10,26 @@ const navItems = [
   { href: "/portofolio", label: "Portofolio" },
   { href: "/tentang", label: "Tentang Kami" },
 ];
+
+// Komponen Logo ABS Baru
+const AbsLogo = () => (
+  <svg 
+    viewBox="0 0 160 160" 
+    className="h-8 w-8" // Ukuran disesuaikan agar pas di navbar
+    fill="none" 
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g transform="translate(10, 10)">
+      <path 
+        d="M 5,70 L 40,5 L 70,70 L 40,70 L 40,90 L 70,90 L 40,150 L 5,80 Z M 70,5 L 100,5 L 130,50 L 100,100 L 70,100 Z M 135,100 L 100,100 L 100,120 L 135,120 L 135,145 L 100,145 L 100,125 M 100,100 L 100,80 L 135,80 Z M 70,5 L 70,70"
+        stroke="currentColor" // Mengikuti warna text-orange-600 dari parent
+        strokeWidth="12"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </g>
+  </svg>
+);
 
 export function PublicNavbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -30,9 +50,12 @@ export function PublicNavbar() {
         }`}
       >
         <div className="mx-auto flex h-20 w-full max-w-[1280px] items-center justify-between px-4 md:px-8">
+          {/* Implementasi Logo Disini */}
           <Link href="/" className="flex items-center gap-2 text-xl font-bold text-orange-600">
-            <TreePine className="h-5 w-5" /> Azzam Barokah Steel
+            <AbsLogo /> 
+            <span className="tracking-tight">Azzam Barokah Steel</span>
           </Link>
+
           <nav className="hidden items-center gap-6 md:flex">
             {navItems.map((item) => (
               <Link
@@ -44,6 +67,7 @@ export function PublicNavbar() {
               </Link>
             ))}
           </nav>
+
           <a
             href="https://wa.me/6285276739937"
             target="_blank"
@@ -52,6 +76,7 @@ export function PublicNavbar() {
           >
             Hubungi Kami
           </a>
+
           <button
             type="button"
             onClick={() => setOpen((prev) => !prev)}
@@ -63,6 +88,7 @@ export function PublicNavbar() {
         </div>
       </header>
 
+      {/* Mobile Menu */}
       {open && (
         <div className="fixed inset-0 z-40 bg-[#0A1628]/70 backdrop-blur-sm md:hidden">
           <div className="pt-24">
