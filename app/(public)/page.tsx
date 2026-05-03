@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import Link from "next/link";
 import { formatPriceRange } from "@/lib/utils";
 
@@ -36,7 +38,7 @@ export default async function HomePage() {
               Lihat Katalog
             </Link>
             <a
-              href="https://wa.me/6285276739937"
+              href="https://wa.me/6282385597262"
               target="_blank"
               rel="noopener noreferrer"
                 className="rounded-full border-2 border-white px-8 py-4 text-center font-semibold transition-all duration-200 hover:scale-[1.02]"
@@ -65,7 +67,13 @@ export default async function HomePage() {
             </div>
           </div>
           <div className="flex min-h-72 items-center justify-center rounded-2xl bg-gradient-to-br from-[#1B4332] to-[#D4A017] text-6xl text-white shadow-xl">
-            🪑
+            <Image 
+                          src="/logo.png" 
+                          alt="Logo" 
+                          width={40} // Sesuaikan ukuran
+                          height={40} 
+                          priority // Opsional: agar loading lebih cepat untuk elemen LCP
+                        />
           </div>
         </div>
       </section>
