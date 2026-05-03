@@ -1,0 +1,113 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  SUPER_ADMIN
+  STAFF
+}
+
+enum OrderStatus {
+  BARU
+  DIPROSES
+  DIKONFIRMASI
+  SELESAI
+  DIBATALKAN
+}
+
+enum ProjectType {
+  RUMAH
+  KAFE
+  SEKOLAH
+  KANTOR
+  LAINNYA
+}
+
+model User {
+  id        String   @id @default(cuid())
+  name      String
+  email     String   @unique
+  password  String
+  role      Role     @default(STAFF)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Product {
+  id          String         @id @default(cuid())
+  name        String
+  category    String
+  description String
+  dimensions  String?
+  material    String?
+  priceMin    Int
+  priceMax    Int
+  isActive    Boolean        @default(true)
+  isFeatured  Boolean        @default(false)
+  images      ProductImage[]
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+}
+
+model ProductImage {
+  id        String  @id @default(cuid())
+  productId String
+  url       String
+  sortOrder Int     @default(0)
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+}
+
+model Portfolio {
+  id          String      @id @default(cuid())
+  title       String
+  projectType ProjectType
+  description String?
+  location    String?
+  image       String?
+  isFeatured  Boolean     @default(false)
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+}
+
+model Order {
+  id             String      @id @default(cuid())
+  customerName   String
+  whatsapp       String
+  furnitureType  String
+  description    String
+  budget         String?
+  referenceImage String?
+  status         OrderStatus @default(BARU)
+  notes          String?
+  createdAt      DateTime    @default(now())
+  updatedAt      DateTime    @updatedAt
+}
+
+model Purchase {
+  id         String   @id @default(cuid())
+  date       DateTime
+  itemName   String
+  category   String?
+  quantity   Float
+  unit       String
+  unitPrice  Int
+  totalPrice Int
+  supplier   String?
+  notes      String?
+  createdAt  DateTime @default(now())
+}
+
+model PricingConfig {
+  id                    String   @id @default(cuid())
+  category              String   @unique
+  basePrice             Int
+  materialMultipliers   Json
+  complexityMultipliers Json
+  pricePerCm            Int      @default(0)
+  updatedAt             DateTime @updatedAt
+}
